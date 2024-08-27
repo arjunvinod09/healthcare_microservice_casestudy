@@ -66,3 +66,17 @@ services:
       - mysql
       - mongo
     restart: always
+  registry_service:
+    build: ./registry-service
+    container_name: registry-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "8761:8761"
+    depends_on:
+      - mysql
+      - mongo
+    networks:
+      - mysql
+      - mongo
+    restart: always
