@@ -7,3 +7,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://mongo:27017/doctor-service
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://localhost:8761/eureka
