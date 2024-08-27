@@ -1,0 +1,12 @@
+app:
+  name: Registry Service
+  version: 1.0.0
+  description: Registry Service
+  base-url: /
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address:false  #for docker to work set to true
